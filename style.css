@@ -1,0 +1,217 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+body {
+    line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+    color: rgb(250, 215, 215);
+}
+.app {
+    position: relative;
+}
+.nav {
+    position: fixed;
+    color: #fff;
+    bottom: 100px;
+    transform: translateX(-100%);
+    transition: all .5s ease-in;
+}
+.nav.show {
+    transform: translateX(0);
+}
+.item {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: start;
+    margin-bottom: 30px;
+}
+.item:nth-child(1) {
+    margin-left: 20px;
+}
+.item:nth-child(2) {
+    margin-left: 30px;
+}
+.item:nth-child(3) {
+    margin-left: 45px;
+}
+.item i {
+    margin-right: 10px;
+}
+.menu {
+    position: fixed;
+    top: -90px;
+    left: -90px;
+    background-color: #ff7979;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 99;
+}
+.menu-list {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 120px;
+    right: 55px;
+    transform: rotate(180deg);
+    transition: all .5s ease-in;
+}
+.menu-item{
+    cursor: pointer;
+    font-size: 26px;
+
+}
+.menu-list.show {
+    transform: rotate(0deg);
+}
+.container {
+    transition: all 0.4s ease-in;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(251, 77, 135), #ff9f7c, rgb(237, 127, 127));
+    padding: 8%;
+    z-index: 98;
+}
+.container.show {
+    transform: rotate(-12deg);
+    margin: -120px 0 0px 200px;
+}
+h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+small {
+    font-style: italic;
+    color: #555;
+}
+p {
+    font-size: 20px;
+    margin: 20px 0px;
+}
+h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.mySlides {display: none;
+    justify-content: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+@media only screen and (max-width: 786px){
+    h2{
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .menu{
+        display: none;
+    }
+}
+img{
+    width: 90%;
+    height: 800px;
+    object-fit: cover;
+}
+
+h2{
+    background: linear-gradient(180deg, rgb(250, 83, 83), rgb(115, 115, 250), white);
+    -webkit-background-clip: text;
+    color: transparent;
+}
